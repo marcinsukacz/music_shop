@@ -3,18 +3,16 @@ package instruments;
 import behaviours.IPlay;
 import behaviours.ISell;
 
-public class Keyboard extends Instrument implements IPlay, ISell {
+public class Keyboard extends Instrument implements IPlay {
     public Keyboard(String name, int priceBought, int sellPrice) {
         super(name, priceBought, sellPrice);
     }
 
     public String play() {
-        return null;
+        return "keyboard sound";
     }
 
-    public int calculateMarkup() {
-        return 0;
-    }
+
 }
 
 

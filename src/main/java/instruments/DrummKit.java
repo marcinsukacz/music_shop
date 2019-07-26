@@ -1,6 +1,15 @@
 package instruments;
 
-public class DrummKit {
+import behaviours.IPlay;
+
+public class DrummKit extends Instrument implements IPlay {
+    public DrummKit(String name, int priceBought, int sellPrice) {
+        super(name, priceBought, sellPrice);
+    }
+
+    public String play() {
+        return "bum tap tap";
+    }
 }
 
 

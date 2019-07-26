@@ -3,7 +3,7 @@ package instruments;
 import behaviours.IPlay;
 import behaviours.ISell;
 
-public abstract class Instrument  {
+public abstract class Instrument  implements ISell{
 
     private String name;
     private int priceBought;
@@ -37,6 +37,10 @@ public abstract class Instrument  {
 
     public void setSellPrice(int sellPrice) {
         this.sellPrice = sellPrice;
+    }
+
+    public int calculateMarkup() {
+        return this.getSellPrice() - this.getPriceBought();
     }
 }
 

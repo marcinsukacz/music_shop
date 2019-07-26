@@ -3,19 +3,17 @@ package instruments;
 import behaviours.IPlay;
 import behaviours.ISell;
 
-public class Guitar extends Instrument implements IPlay, ISell {
+public class Guitar extends Instrument implements IPlay {
 
     public Guitar(String name, int priceBought, int sellPrice) {
         super(name, priceBought, sellPrice);
     }
 
     public String play() {
-        return null;
+        return "guitar sound";
     }
 
-    public int calculateMarkup() {
-        return 0;
-    }
+
 }
 
 
