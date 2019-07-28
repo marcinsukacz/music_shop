@@ -50,4 +50,12 @@ public class ShopTest {
 
 
     }
+
+    @Test
+    public void canShowMaxPotentialProfit() {
+        shop.add(stick1);
+        shop.add(gibson1);
+        assertEquals(101, shop.showPotentialProfit());
+
+    }
 }

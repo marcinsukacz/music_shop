@@ -27,6 +27,18 @@ public class Shop {
     public void remove(ISell item) {
         this.stock.remove(item);
     }
+
+    public int showPotentialProfit() {
+
+        int maxProfit = 0;
+
+        for (ISell item : stock){
+            maxProfit += item.calculateMarkup();
+        }
+
+        return maxProfit;
+
+    }
 }
 
 
@@ -56,3 +68,8 @@ public class Shop {
 //        Create a Shop class, which has a collection of ISell items, called stock. In your shop you should be able to:
 //        add items to stock.
 //        remove items from stock.
+//
+//    Using the calculateMarkup method for each item in stock, create a method which
+//        gives the total potential profit for the shop.
+//        Create and use an enum for instrument types e.g. keyboard, wind, brass etc
+//        Any other extensions you may wish to add.
