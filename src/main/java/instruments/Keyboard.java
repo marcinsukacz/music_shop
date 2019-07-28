@@ -4,8 +4,8 @@ import behaviours.IPlay;
 import behaviours.ISell;
 
 public class Keyboard extends Instrument implements IPlay {
-    public Keyboard(String name, int priceBought, int sellPrice) {
-        super(name, priceBought, sellPrice);
+    public Keyboard(String name, Brand brand, int priceBought, int sellPrice) {
+        super(name, brand, priceBought, sellPrice);
     }
 
     public String play() {

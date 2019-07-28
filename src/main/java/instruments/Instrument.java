@@ -6,13 +6,19 @@ import behaviours.ISell;
 public abstract class Instrument  implements ISell{
 
     private String name;
+    private Brand brand;
     private int priceBought;
     private int sellPrice;
 
-    public Instrument(String name, int priceBought, int sellPrice) {
+    public Instrument(String name, Brand brand, int priceBought, int sellPrice) {
         this.name = name;
+        this.brand = brand;
         this.priceBought = priceBought;
         this.sellPrice = sellPrice;
+    }
+
+    public Brand getBrand() {
+        return brand;
     }
 
     public String getName() {

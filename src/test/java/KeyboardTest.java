@@ -1,3 +1,4 @@
+import instruments.Brand;
 import instruments.Keyboard;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,12 +11,22 @@ public class KeyboardTest {
 
     @Before
     public void before(){
-        roland1 = new Keyboard("Roland 808", 100, 120);
+        roland1 = new Keyboard("Roland 808", Brand.ROLAND, 100, 120);
     }
 
     @Test
     public void keyboardHasName(){
         assertEquals("Roland 808", roland1.getName());
+    }
+
+    @Test
+    public void keyboardHasBrand(){
+        assertEquals(Brand.ROLAND, roland1.getBrand());
+    }
+
+    @Test
+    public void keyboardMadeIn(){
+        assertEquals("Japan", roland1.getBrand().madeIn());
     }
 
     @Test

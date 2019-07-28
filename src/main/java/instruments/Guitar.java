@@ -5,8 +5,18 @@ import behaviours.ISell;
 
 public class Guitar extends Instrument implements IPlay {
 
-    public Guitar(String name, int priceBought, int sellPrice) {
-        super(name, priceBought, sellPrice);
+    private int noOfStrings;
+
+    public Guitar(String name, Brand brand, int priceBought, int sellPrice, int noOfStrings) {
+        super(name, brand, priceBought, sellPrice);
+
+        this.noOfStrings = noOfStrings;
+
+
+    }
+
+    public int getNoOfStrings() {
+        return noOfStrings;
     }
 
     public String play() {

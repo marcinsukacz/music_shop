@@ -1,3 +1,4 @@
+import instruments.Brand;
 import instruments.Guitar;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,7 +11,12 @@ public class GuitarTest {
 
     @Before
     public void before(){
-        gibson1 = new Guitar("Gibson 1972", 800, 900);
+        gibson1 = new Guitar("Gibson 1972", Brand.GIBSON, 800, 900, 4);
+    }
+
+    @Test
+    public void hasNoOfStrings() {
+        assertEquals(4, gibson1.getNoOfStrings());
     }
 
     @Test

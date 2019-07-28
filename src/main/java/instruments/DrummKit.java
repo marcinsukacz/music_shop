@@ -3,8 +3,8 @@ package instruments;
 import behaviours.IPlay;
 
 public class DrummKit extends Instrument implements IPlay {
-    public DrummKit(String name, int priceBought, int sellPrice) {
-        super(name, priceBought, sellPrice);
+    public DrummKit(String name, Brand brand, int priceBought, int sellPrice) {
+        super(name, brand, priceBought, sellPrice);
     }
 
     public String play() {

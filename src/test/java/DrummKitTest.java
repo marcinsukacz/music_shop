@@ -1,3 +1,4 @@
+import instruments.Brand;
 import instruments.DrummKit;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,8 +11,9 @@ public class DrummKitTest {
 
     @Before
     public void before(){
-        kit1 = new DrummKit("Kelp", 1000, 1200);
+        kit1 = new DrummKit("Kelp1", Brand.PEARL, 1000, 1200);
     }
+
     @Test
     public void canPlay() {
         assertEquals("bum tap tap", kit1.play());
