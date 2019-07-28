@@ -3,9 +3,20 @@ package instruments;
 import behaviours.IPlay;
 import behaviours.ISell;
 
-public class Keyboard extends Instrument implements IPlay {
-    public Keyboard(String name, Brand brand, int priceBought, int sellPrice) {
+public class Keyboard extends Instrument implements IPlay{
+
+    private int noOfKeys;
+
+
+
+    public Keyboard(String name, Brand brand, int priceBought, int sellPrice, int noOfKeys) {
         super(name, brand, priceBought, sellPrice);
+
+        this.noOfKeys = noOfKeys;
+    }
+
+    public int getNoOfKeys() {
+        return noOfKeys;
     }
 
     public String play() {

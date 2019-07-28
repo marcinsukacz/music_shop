@@ -11,7 +11,7 @@ public class KeyboardTest {
 
     @Before
     public void before(){
-        roland1 = new Keyboard("Roland 808", Brand.ROLAND, 100, 120);
+        roland1 = new Keyboard("Roland 808", Brand.ROLAND, 100, 120, 48);
     }
 
     @Test
@@ -37,6 +37,11 @@ public class KeyboardTest {
     @Test
     public void keyboardHasSellingPrice() {
         assertEquals(120, roland1.getSellPrice());
+    }
+
+    @Test
+    public void hasNoOfKeys() {
+        assertEquals(48, roland1.getNoOfKeys());
     }
 
     @Test

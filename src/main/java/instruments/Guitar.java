@@ -1,7 +1,6 @@
 package instruments;
 
 import behaviours.IPlay;
-import behaviours.ISell;
 
 public class Guitar extends Instrument implements IPlay {
 
